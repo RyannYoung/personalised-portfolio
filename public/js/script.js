@@ -4,7 +4,6 @@
 $(document).ready(function () {
 
   $(".preloader").addClass("animated fadeOut").one('animationend webkitAnimationEnd oAnimationEnd', function () {
-    $("body").addClass("animated fadeIn slower");
     $(".preloader").css("display", "none");
   });
 
@@ -51,11 +50,8 @@ function email(leadFirstName, leadLastName, leadEmail, leadPhone, leadReason, le
         $(".container-contact").hide();
       });
 
-      $(".container-successful").show();
-      $(".container-successful").addClass("animated slideInUp");
 
 
-      $(".container-contact").hide();
       $(".container-successful").show();
 
     }, function (error) {
@@ -66,6 +62,16 @@ function email(leadFirstName, leadLastName, leadEmail, leadPhone, leadReason, le
 }
 
 document.getElementById('submit').addEventListener('click', event => {
+
+  // Hide the container from view
+  $(".container-contact").addClass("animated slideOutLeft").one('animationend webkitAnimationEnd oAnimationEnd', function () {
+    $(".container-contact").hide();
+    $(".container-successful").addClass("animated slideInUp");
+    $(".container-successful").show();
+
+  });
+
+
 
   console.log("Successful");
   var leadFirstName = document.getElementById('firstName').value;
