@@ -53,7 +53,7 @@
     <div class="loading-icon">
       <img class="l-icon" src="assets/load-icon.svg" alt="Image loader" srcset="">
     </div>
-    <h1 class="loading-text">loading the page</h1>
+    <h1 class="loading-text">Please note this portfolio is still a work in progress!</h1>
   </div>
 
   <nav class="navbar">
@@ -113,6 +113,8 @@
     </div>
   </nav>
 
+  
+
   <div rel="preload" class="background">
     <div class="contact-card">
       <div class="container-card">
@@ -140,7 +142,7 @@
               <a href="https://goo.gl/maps/WkXifoQa41HBWer47">Canberra, A.C.T</a>
             </div>
             <div class="cv-download">
-              <button type="button" name="" id="trigger" class="btn btn-info btn-sm" onClick=""><i class="fa fa-file"
+              <button type="button" name="" id="btn-resume" class="btn btn-info btn-sm" onClick="displayResume()"><i class="fa fa-file"
                   aria-hidden="true"></i> View CV</button>
               <button type="button" name="" id="trigger" class="btn btn-info btn-sm"><i class="fa fa-file"
                   aria-hidden="true"></i> Download CV</button>
@@ -150,6 +152,17 @@
       </div>
     </div>
   </div>
+
+  <!-- Display the resume -->
+  <div id="resume-modal" class="modal">
+    <!-- Resume content -->
+    <div class="modal-content">
+      <span id="close-span">&times;</span>
+      <iframe src="assets/resume.pdf#toolbar=0" id="resume" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  
 
   <!-- ABOUT ME -->
   <div class="background-about-me" id="link-about-me">
@@ -186,7 +199,7 @@
     <div class="project-list">
       <div class="project">
         <div class="project-image">
-          <img src="assets/lg/portfoliomockup.jpg" alt="">
+          <img src="assets/lg/portfoliomockup.jpg" alt="portfolio mockup">
         </div>
         <div class="project-details">
           <div class="project-description">

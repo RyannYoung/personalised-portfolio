@@ -3,11 +3,20 @@
 // PRELOADER SECTION
 $(document).ready(function () {
 
-  $(".preloader").addClass("animated fadeOut").one('animationend webkitAnimationEnd oAnimationEnd', function () {
-    $(".preloader").css("display", "none");
-  });
+  var img = new Image();
+
+  // Callback for when the image loads
+  img.onload = () => {
+    $(".preloader").addClass("animated fadeOut").one('animationend webkitAnimationEnd oAnimationEnd', function () {
+      $(".preloader").css("display", "none");
+    });
+  }
+  img.src = "../assets/lg/backgroundblue.jpg"
+
+
 
 });
+
 
 
 // Set the configuration for your app
@@ -109,3 +118,25 @@ $(".btn").click(function () {
     $(this).removeClass(animation);
   });
 });
+
+// DISPLAY RESUME
+
+
+// select the modal
+const modal = document.getElementById("resume-modal")
+const modalButton = document.getElementById("btn-resume")
+const span = document.getElementById("close-span")
+
+modalButton.onclick = () => {
+  modal.style.display = "block";
+}
+
+span.onclick = () => {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
