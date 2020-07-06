@@ -53,7 +53,7 @@
     <div class="loading-icon">
       <img class="l-icon" src="assets/load-icon.svg" alt="Image loader" srcset="">
     </div>
-    <h1 class="loading-text">Please note this portfolio is still a work in progress!</h1>
+    <p class="loading-text">Please note this portfolio is still a work in progress!<br/>Not all items are true/finalised</p>
   </div>
 
   <nav class="navbar">
@@ -143,9 +143,9 @@
             </div>
             <div class="cv-download">
               <button type="button" name="" id="btn-resume" class="btn btn-info btn-sm" onClick="displayResume()"><i class="fa fa-file"
-                  aria-hidden="true"></i> View CV</button>
-              <button type="button" name="" id="trigger" class="btn btn-info btn-sm"><i class="fa fa-file"
-                  aria-hidden="true"></i> Download CV</button>
+                  aria-hidden="true"></i> View Resume</button>
+              <button type="button" name="" id="btn-resume-download" onclick="location.href='https://drive.google.com/uc?export=download&id=1oR7ylwqtBsnmikHnn_z6DJ0AOIiJ3ayq'" class="btn btn-info btn-sm"><i class="fa fa-file"
+                  aria-hidden="true"></i> Download Resume</button>
             </div>
           </div>
         </div>
@@ -158,7 +158,7 @@
     <!-- Resume content -->
     <div class="modal-content">
       <span id="close-span">&times;</span>
-      <iframe src="assets/resume.pdf#toolbar=0" id="resume" frameborder="0"></iframe>
+      <iframe src="https://drive.google.com/file/d/1oR7ylwqtBsnmikHnn_z6DJ0AOIiJ3ayq/preview" id="resume"></iframe>
     </div>
   </div>
 
@@ -186,6 +186,7 @@
         <li>Java</li>
         <li>Python 3</li>
         <li>C++</li>
+        <li>Javascript</li>
         <li>HTML/CSS</li>
         <li>Bootstrap</li>
       </div>
@@ -193,7 +194,7 @@
   </div>
 
   <div class="container-projects" id="link-projects">
-    <h1>My Projects
+    <h1>Highlighted Projects
       <hr class="hr-style">
     </h1>
     <div class="project-list">
@@ -234,21 +235,17 @@
       </div>
       <div class="project">
         <div class="project-image">
-          <img src="https://via.placeholder.com/1000x500" alt="">
+          <img src="assets/alis.gif" alt="slideshow of screenshots">
         </div>
         <div class="project-details">
 
           <div class="project-description">
             <h2 class="project-heading">
-              Project Title
+              Automatic Language Identification System
             </h2>
-            <p class="project-category">Front End Web-Development</p>
-            <p class="project-text">This is one of my projects im very proud of iThis is one of my projects im very
-              proud of it. this is just some sample textThis is one of my projects im very proud of it. this is just
-              some sample textThis is one of my projects im very proud of it. this is just some sample textt. this is
-              just some sample textThis is one of my projects im very proud of it. this is just some sample textThis is
-              one of my projects im very proud of it. this is just some sample textThis is one of my projects im very
-              proud of it. this is just some sample text</p>
+            <p class="project-category">Java Project</p>
+            <p class="project-text">Written as a class project this program is able to identify accurately whether a .txt file is written in either Spanish, English, German, French or Italian.<span id="a-span-dots">...</span> <span id="a-show-more" class="show-more"> It performs two tasks, learning and identification. ADD MORE DESCRIPTION</span></p>
+            <button onclick="displayText('a')" id="a-btn-show" class="btn btn-info btn-sm">Read more</button>
           </div>
           <div class="project-skills">
             <hr class="break">
@@ -279,7 +276,7 @@
               Project Title
             </h2>
             <p class="project-category">Front End Web-Development</p>
-            <p>This is one of my projects im very proud of it. this is just some sample text</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam bibendum massa imperdiet dapibus. Duis in lacinia mauris. Phasellus vel suscipit urna. Praesent ut lectus a ante tincidunt tincidunt sit amet in dui. Duis in turpis vitae lacus congue pellentesque. Vivamus sollicitudin tristique sem, in ultrices lacus venenatis sit amet. Nunc vestibulum, nisl nec porta rhoncus, augue nunc scelerisque sapien, sit amet elementum est velit vel felis. Ut a elit vehicula, tincidunt augue eget, pulvinar nulla. Duis laoreet eu neque eu dignissim. Aliquam tincidunt fringilla feugiat. Ut ultrices, tortor in convallis egestas, nunc tellus pellentesque odio, eu elementum nisi dui et mauris. Pellentesque arcu lacus, pulvinar in elit at, interdum tristique turpis. Maecenas nec mauris lorem. Fusce hendrerit velit est, at ornare libero faucibus eu. Nullam tincidunt condimentum diam vel ultricies. Praesent ornare vulputate ipsum ut pharetra.</p>
           </div>
           <div class="project-skills">
             <hr class="break">

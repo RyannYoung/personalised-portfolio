@@ -119,8 +119,24 @@ $(".btn").click(function () {
   });
 });
 
-// DISPLAY RESUME
+// DISPLAY TEXT
+function displayText(id) {
+  const dots = document.getElementById(id+"-span-dots");
+  const moreText = document.getElementById(id+"-show-more")
+  const btnText = document.getElementById("a-btn-show")
 
+  if(dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+
+  document.getElementsByClassName("project-image").style.alignItems = "center"
+}
 
 // select the modal
 const modal = document.getElementById("resume-modal")
