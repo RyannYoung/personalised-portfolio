@@ -30,6 +30,14 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 
+var query = database.ref('users').orderByKey();
+query.once('value').then(snapshot => {
+  console.log(snapshot)
+  snapshot.forEach(item => {
+    console.log('itemkey: ', item.key, "data: ", item.child('reason').val())
+  })
+})
+
 /**
  * EmailJs Section
  *   Enables Client-side emailing
@@ -129,7 +137,7 @@ function displayText(id) {
   // Get the element with the respective name based on it's id
   const dots = document.getElementById(id+"-span-dots");
   const moreText = document.getElementById(id+"-show-more")
-  const btnText = document.getElementById("a-btn-show")
+  const btnText = document.getElementById(id+"-btn-show")
 
   // Display and hide based on the button clicks and their current set value
   if(dots.style.display === "none") {
@@ -155,11 +163,13 @@ const span = document.getElementById("close-span")
 // display the pdf modal
 modalButton.onclick = () => {
   modal.style.display = "block";
+  
 }
 
 // Hide the pdf modal
 span.onclick = () => {
-  modal.style.display = "none";
+ modal.style.display = "none";
+  
 }
 
 // Hide the modal whenever the user clicks on the window

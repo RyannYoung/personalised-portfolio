@@ -31,7 +31,7 @@
   <script async src="https://kit.fontawesome.com/717af7c90b.js" crossorigin="anonymous"></script>
 
   <!-- Animate CSS -->
-  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
 
   <!-- Reset CSS -->
   <link rel="stylesheet" href="css/reset.css">
@@ -113,8 +113,6 @@
     </div>
   </nav>
 
-  
-
   <div rel="preload" class="background">
     <div class="contact-card">
       <div class="container-card">
@@ -156,7 +154,7 @@
   <!-- Display the resume -->
   <div id="resume-modal" class="modal">
     <!-- Resume content -->
-    <div class="modal-content">
+    <div class="modal-content animated zoomIn">
       <span id="close-span">&times;</span>
       <iframe src="https://drive.google.com/file/d/1oR7ylwqtBsnmikHnn_z6DJ0AOIiJ3ayq/preview" id="resume"></iframe>
     </div>
@@ -208,6 +206,7 @@
               Responsive Portfolio
             </h2>
             <p class="project-category">Front-end Web Development</p>
+            <a href="https://github.com/RyannYoung/personalised-portfolio" class="project-link"><i class="fa fa-link project-link" aria-hidden="true"></i>github.com/RyannYoung/personalised-portfolio</a>
             <p class="project-text">Built with no framework (i.e. Bootstrap), I have created a responsive portfolio
               which displays my work. It contains a list of my featured projects, a viewable/downloadable CV along with
               a custom build contact service using emailJS. The design uses mostly flexbox to create a responsive
@@ -244,8 +243,11 @@
               Automatic Language Identification System
             </h2>
             <p class="project-category">Java Project</p>
-            <p class="project-text">Written as a class project this program is able to identify accurately whether a .txt file is written in either Spanish, English, German, French or Italian.<span id="a-span-dots">...</span> <span id="a-show-more" class="show-more"> It performs two tasks, learning and identification. ADD MORE DESCRIPTION</span></p>
-            <button onclick="displayText('a')" id="a-btn-show" class="btn btn-info btn-sm">Read more</button>
+            <a href="https://github.com/RyannYoung/Automatic-Language-Identification-System" class="project-link"><i class="fa fa-link project-link" aria-hidden="true"></i>
+              github.com/RyannYoung/Automatic-Language-Identification-System</a>
+            <p class="project-text">
+              Written as a class project this program is able to identify accurately whether a .txt file is written in either Spanish, English, German, French or Italian.<span id="a-span-dots">...</span> <span id="a-show-more" class="show-more"> It performs two tasks, learning and identification. ADD MORE DESCRIPTION</span></p>
+            <button onclick="displayText('a')" id="a-btn-show" class="btn btn-info btn-sm btn-display-text">Read more</button>
           </div>
           <div class="project-skills">
             <hr class="break">
@@ -253,14 +255,11 @@
               Skills Involved
             </h3>
             <div class="skill-container">
-              <li class="skill-item">skill</li>
-              <li class="skill-item">this skill</li>
-              <li class="skill-item">also</li>
-              <li class="skill-item">this</li>
-              <li class="skill-item">filler</li>
-              <li class="skill-item">saaski mwdquio</li>
-              <li class="skill-item">saaski mwdquio</li>
-              <li class="skill-item">saaski mwdquio</li>
+              <li class="skill-item">Data Structures</li>
+              <li class="skill-item">IO/File</li>
+              <li class="skill-item">Artificial Intelligence</li>
+              <li class="skill-item">Java Programming</li>
+              <li class="skill-item">Eclipse IDE</li>
             </div>
           </div>
         </div>
@@ -273,10 +272,17 @@
 
           <div class="project-description">
             <h2 class="project-heading">
-              Project Title
+              Interactive Weather Application
             </h2>
-            <p class="project-category">Front End Web-Development</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam bibendum massa imperdiet dapibus. Duis in lacinia mauris. Phasellus vel suscipit urna. Praesent ut lectus a ante tincidunt tincidunt sit amet in dui. Duis in turpis vitae lacus congue pellentesque. Vivamus sollicitudin tristique sem, in ultrices lacus venenatis sit amet. Nunc vestibulum, nisl nec porta rhoncus, augue nunc scelerisque sapien, sit amet elementum est velit vel felis. Ut a elit vehicula, tincidunt augue eget, pulvinar nulla. Duis laoreet eu neque eu dignissim. Aliquam tincidunt fringilla feugiat. Ut ultrices, tortor in convallis egestas, nunc tellus pellentesque odio, eu elementum nisi dui et mauris. Pellentesque arcu lacus, pulvinar in elit at, interdum tristique turpis. Maecenas nec mauris lorem. Fusce hendrerit velit est, at ornare libero faucibus eu. Nullam tincidunt condimentum diam vel ultricies. Praesent ornare vulputate ipsum ut pharetra.</p>
+            <p class="project-category">Front-end API's</p>
+            <a href="https://github.com/RyannYoung/weatherapp" class="project-link"><i class="fa fa-link project-link" aria-hidden="true"></i>
+              github.com/RyannYoung/weatherapp
+            </a>
+            <p>
+              A basic weather application that provides real-time information on either the user's current location or their selection of the Google Map.
+              <span id="b-span-dots">...</span> <span id="b-show-more" class="show-more"> More information</span>
+            </p>
+            <button onclick="displayText('b')" id="b-btn-show" class="btn btn-info btn-sm btn-display-text">Read more</button>
           </div>
           <div class="project-skills">
             <hr class="break">
@@ -284,14 +290,12 @@
               Skills Involved
             </h3>
             <div class="skill-container">
-              <li class="skill-item">skill</li>
-              <li class="skill-item">this skill</li>
-              <li class="skill-item">also</li>
-              <li class="skill-item">this</li>
-              <li class="skill-item">filler</li>
-              <li class="skill-item">saaski mwdquio</li>
-              <li class="skill-item">saaski mwdquio</li>
-              <li class="skill-item">saaski mwdquio</li>
+              <li class="skill-item">Openweather API</li>
+              <li class="skill-item">HTML/CSS</li>
+              <li class="skill-item">JQuery</li>
+              <li class="skill-item">Javascript</li>
+              <li class="skill-item"></li>
+              <li class="skill-item">Google Maps API</li>
             </div>
           </div>
         </div>
@@ -418,6 +422,24 @@
       </ul>
     </div>
   </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-copyright">
+        <i class="fa fa-copyright" aria-hidden="true"></i>
+        <p class="copyright-text">2020, Ryan Jack Young, All rights reserved</p>
+      </div>
+
+      <div class="footer-contact-me">
+        <i class="fa fa-github" aria-hidden="true"></i>
+        <i class="fa fa-free-code-camp" aria-hidden="true"></i>
+      </div>
+
+      <div class="footer-version">
+        <p>Version 1.0.3</p>
+      </div>
+    </div>
+  </footer>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
